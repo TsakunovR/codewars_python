@@ -8,11 +8,10 @@ Examples:
 solution('abc', 'bc') # returns true
 solution('abc', 'd') # returns false
 """
-from ast import literal_eval
 
 
 def solution(text, ending):
-    if text[::-1].find(ending[::-1]) == 0:
+    if text[::-1].find(ending[::-1]) == 0: #конструкция [::-1] переворачивает строку. abc превратится в cba
         return True
     else:
         return False
